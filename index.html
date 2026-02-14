@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dayana ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,7 +20,7 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Georgia', serif;
+            font-family: 'Lora', serif;
             overflow-x: hidden;
         }
 
@@ -31,6 +34,9 @@
             cursor: pointer;
             transform-style: preserve-3d;
             transition: transform 0.6s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .heart {
@@ -52,12 +58,13 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 32px;
-            font-weight: bold;
+            font-size: 40px;
+            font-weight: 700;
             text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
             pointer-events: none;
             z-index: 1;
-            font-family: 'Brush Script MT', cursive, 'Georgia', serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
 
         @keyframes heartbeat {
@@ -67,15 +74,15 @@
         }
 
         .click-text {
-            position: absolute;
-            top: 220px;
-            left: 50%;
-            transform: translateX(-50%);
+            margin-top: 40px;
             color: white;
             font-size: 18px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
             animation: pulse 2s ease-in-out infinite;
-            white-space: nowrap;
+            text-align: center;
+            max-width: 320px;
+            font-family: 'Lora', serif;
+            font-weight: 500;
         }
 
         @keyframes pulse {
@@ -110,6 +117,7 @@
             display: flex;
             flex: 1;
             position: relative;
+            overflow: hidden;
         }
 
         .book-spread {
@@ -150,19 +158,23 @@
         }
 
         .story-content {
-            color: #333;
-            line-height: 1.8;
-            font-size: 18px;
+            color: #2c2c2c;
+            line-height: 1.9;
+            font-size: 19px;
             text-align: justify;
             width: 100%;
+            font-family: 'Lora', serif;
+            font-weight: 400;
         }
 
         .story-title {
             color: #ff1744;
-            font-size: 32px;
+            font-size: 42px;
             text-align: center;
-            margin-bottom: 30px;
-            font-weight: bold;
+            margin-bottom: 35px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
         }
 
         .story-text {
@@ -174,7 +186,9 @@
             font-style: italic;
             margin-top: 40px;
             color: #ff1744;
-            font-size: 20px;
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
         }
 
         .close-btn {
@@ -217,7 +231,8 @@
             border-radius: 25px;
             cursor: pointer;
             font-size: 16px;
-            font-family: 'Georgia', serif;
+            font-family: 'Lora', serif;
+            font-weight: 600;
             box-shadow: 0 4px 15px rgba(255, 23, 68, 0.3);
             transition: all 0.3s;
         }
@@ -237,9 +252,10 @@
             color: #ff1744;
             font-size: 16px;
             font-weight: bold;
+            font-family: 'Playfair Display', serif;
         }
 
-        /* RESPONSIVE PARA MÓVIL */
+       
         @media (max-width: 768px) {
             .heart {
                 width: 150px;
@@ -247,12 +263,13 @@
             }
 
             .heart-text {
-                font-size: 24px;
+                font-size: 30px;
             }
 
             .click-text {
-                font-size: 16px;
-                top: 170px;
+                font-size: 15px;
+                margin-top: 30px;
+                max-width: 280px;
             }
 
             .book {
@@ -260,14 +277,14 @@
                 height: 90vh;
             }
 
-            /* Mantener páginas una al lado de la otra pero más pequeñas */
+           
             .book-spread {
                 flex-direction: row;
             }
 
             .page {
                 width: 50%;
-                padding: 25px 15px;
+                padding: 20px 12px;
                 font-size: 14px;
             }
 
@@ -281,55 +298,56 @@
             }
 
             .story-title {
-                font-size: 20px;
-                margin-bottom: 20px;
+                font-size: 24px;
+                margin-bottom: 15px;
+                letter-spacing: 1px;
             }
 
             .story-content {
-                font-size: 14px;
-                line-height: 1.6;
+                font-size: 12px;
+                line-height: 1.7;
             }
 
             .story-text {
-                text-indent: 20px;
-            }
-
-            .nav-btn {
-                padding: 10px 18px;
-                font-size: 14px;
-            }
-
-            .signature {
-                font-size: 16px;
-                margin-top: 30px;
-            }
-
-            .page-indicator {
-                font-size: 14px;
-            }
-        }
-
-        /* Para pantallas muy pequeñas */
-        @media (max-width: 480px) {
-            .page {
-                padding: 20px 12px;
-            }
-
-            .story-content {
-                font-size: 13px;
-            }
-
-            .story-title {
-                font-size: 18px;
+                text-indent: 15px;
             }
 
             .nav-btn {
                 padding: 8px 15px;
                 font-size: 13px;
             }
+
+            .signature {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+
+            .page-indicator {
+                font-size: 13px;
+            }
         }
 
-        /* Elementos decorativos flotantes */
+       
+        @media (max-width: 480px) {
+            .page {
+                padding: 15px 10px;
+            }
+
+            .story-content {
+                font-size: 11px;
+            }
+
+            .story-title {
+                font-size: 20px;
+            }
+
+            .nav-btn {
+                padding: 7px 12px;
+                font-size: 12px;
+            }
+        }
+
+       
         .floating-heart {
             position: fixed;
             font-size: 20px;
@@ -343,7 +361,7 @@
             50% { transform: translateY(-20px) rotate(10deg); }
         }
 
-        /* Brillo en el corazón */
+       
         .heart svg path {
             transition: all 0.3s ease;
         }
@@ -365,7 +383,6 @@
                 <div class="heart-text">Dayana</div>
             </div>
             <div class="click-text">Coloca tu dispositivo horizontal. Luego haz clic en el corazón ❤️</div>
-            
         </div>
     </div>
 
@@ -373,79 +390,96 @@
         <button class="close-btn" id="closeBtn">×</button>
         
         <div class="pages-container">
-            <!-- Spread 1: Páginas 1-2 -->
+           
             <div class="book-spread active" data-spread="1">
                 <div class="page page-left">
                     <div class="story-content">
                         <h1 class="story-title">Una Historia de Amor</h1>
                         <p class="story-text">
-                            En el universo infinito, entre millones de estrellas y galaxias, dos almas se encontraron. 
-                            No fue casualidad, fue destino. Como dos imanes que no pueden resistirse, como la luna que 
-                            siempre busca al sol, así llegaste a mi vida.
+                            Hoy quiero aprovechar este día de San Valentín para decirte lo mucho que significas para mí. 
+                            Quiero también aprovechar esta oportunidad para recordar como ha ido nuestra historia hasta ahora.
                         </p>
                     </div>
                 </div>
                 <div class="page page-right">
                     <div class="story-content">
                         <p class="story-text">
-                            Cada día contigo es un regalo envuelto en sonrisas, atado con risas, y decorado con momentos 
-                            que guardaré por siempre en mi corazón. Has convertido lo ordinario en extraordinario, 
-                            simplemente por estar ahí.
-                        </p>
+                            Todo empezó con una simple conversación, un intercambio de palabras que se convirtió en risas, 
+                            en complicidad, en una conexión que no podía ser ignorada. Luego te invité a salir, y cada momento contigo ha sido un regalo.
+                        </p> 
                     </div>
                 </div>
             </div>
 
-            <!-- Spread 2: Páginas 3-4 -->
+            
             <div class="book-spread" data-spread="2">
                 <div class="page page-left">
                     <div class="story-content">
                         <p class="story-text">
-                            Eres la razón por la que creo en la magia, la prueba de que los sueños se hacen realidad, 
-                            y la respuesta a preguntas que ni siquiera sabía que tenía.
+                            Recuerdo todavía la primera vez que te vi, esa mezcla de nervios y emoción, no sabía a donde nos iba a llevar el destino, pero quise arriesgarlo.
+                            Desde entonces, cada día contigo ha sido una aventura maravillosa, llena de amor, aprendizaje y crecimiento mutuo.
                         </p>
                     </div>
                 </div>
                 <div class="page page-right">
                     <div class="story-content">
                         <p class="story-text">
-                            Este San Valentín quiero que sepas que mi amor por ti crece cada día. Como un árbol que 
-                            se hace más fuerte con el tiempo, como las olas que nunca dejan de besar la orilla, 
-                            así es mi amor por ti: constante, eterno, inquebrantable.
+                            Recuerdo también nuestra segunda cita, donde hubo un momento en el que me preguntaste sobre si me gustaba la pizza con piña, a lo que yo respondí que si.
+                            Después de eso me diste un gran abrazo que lo recuerdo hasta el día de hoy. Fue el primer abrazo que me diste y aunque traté de disimularlo, si estaba bastante emocionado y nervioso.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Spread 3: Páginas 5-6 -->
+           
             <div class="book-spread" data-spread="3">
                 <div class="page page-left">
                     <div class="story-content">
                         <p class="story-text">
-                            Gracias por cada abrazo que cura, cada palabra que inspira, cada mirada que enamora. 
-                            Gracias por ser exactamente quien eres, porque eso es más que suficiente. Eres perfecta 
-                            en tu imperfección, y te amo por todo lo que eres y todo lo que seremos juntos.
+                            Luego vino la cita del museo, donde por fin nos tomamos de las manos y entonces comprendí que te quería de verdad, que quería estar contigo, que quería seguir conociéndote y compartir momentos juntos.
                         </p>
                     </div>
                 </div>
                 <div class="page page-right">
                     <div class="story-content">
                         <p class="story-text">
-                            Hoy, mañana y siempre, mi corazón late por ti.
+                            Y luego vino la cita del parque, estaba muy nervioso porque quería pedirte un beso y no sabía como hacerlo. Entre risas y conversaciones, me animé a pedírtelo
+                            y fue el momento más mágico que recuerdo hasta el día de hoy con mucho cariño.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="book-spread" data-spread="4">
+                <div class="page page-left">
+                    <div class="story-content">
+                        <p class="story-text">
+                            A partir de ese día, cada momento contigo ha sido un sueño hecho realidad. Y así fue como nuestra historia comenzó. Hoy estamos juntos y vivimos cada día a la vez, creciendo, madurando y siempre sabiendo que nos escogimos mutuamente para navegar en este 
+                            inmenso mar que es la vida.
+                        </p>
+                    </div>
+                </div>
+                <div class="page page-right">
+                    <div class="story-content">
+                        <p class="story-text">
+                            No sé lo que el futuro nos depara, pero sé que mientras estemos juntos, cada día será una aventura maravillosa.
+                        </p>
+                        <p class="story-text" style="margin-top: 30px; text-align: center; font-size: 26px; color: #ff1744; font-family: 'Playfair Display', serif; font-weight: 700;">
+                            Te adoro amorcito!!!!!!!
                         </p>
                         <p class="signature">
-                            Con todo mi amor,<br>
-                            en este San Valentín ❤️
+                           Feliz San Valentín ❤️
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Navegación -->
+       
         <div class="navigation">
             <button class="nav-btn" id="prevBtn" disabled>← Anterior</button>
-            <span class="page-indicator" id="pageIndicator">1-2 / 6</span>
+            <span class="page-indicator" id="pageIndicator">1-2 / 8</span>
             <button class="nav-btn" id="nextBtn">Siguiente →</button>
         </div>
     </div>
@@ -459,9 +493,9 @@
         const pageIndicator = document.getElementById('pageIndicator');
         
         let currentSpread = 1;
-        const totalSpreads = 3;
+        const totalSpreads = 4;
 
-        // Función para mostrar spread
+       
         function showSpread(spreadNum) {
             document.querySelectorAll('.book-spread').forEach(spread => {
                 spread.classList.remove('active');
@@ -474,17 +508,17 @@
             
             currentSpread = spreadNum;
             
-            // Actualizar indicador
+          
             const leftPage = (spreadNum - 1) * 2 + 1;
             const rightPage = spreadNum * 2;
-            pageIndicator.textContent = `${leftPage}-${rightPage} / 6`;
+            pageIndicator.textContent = `${leftPage}-${rightPage} / 8`;
             
-            // Deshabilitar botones según la página
+          
             prevBtn.disabled = currentSpread === 1;
             nextBtn.disabled = currentSpread === totalSpreads;
         }
 
-        // Navegación
+       
         prevBtn.addEventListener('click', () => {
             if (currentSpread > 1) {
                 showSpread(currentSpread - 1);
@@ -497,7 +531,7 @@
             }
         });
 
-        // Crear corazones flotantes
+       
         function createFloatingHearts() {
             for (let i = 0; i < 15; i++) {
                 const heart = document.createElement('div');
@@ -518,7 +552,7 @@
             setTimeout(() => {
                 book.classList.add('open');
                 createFloatingHearts();
-                showSpread(1); // Reiniciar a la primera página
+                showSpread(1); 
             }, 600);
         });
 
@@ -530,12 +564,12 @@
                 heartContainer.style.transform = 'scale(1)';
                 heartContainer.style.opacity = '1';
                 
-                // Remover corazones flotantes
+                
                 document.querySelectorAll('.floating-heart').forEach(h => h.remove());
             }, 800);
         });
 
-        // Navegación con teclado
+       
         document.addEventListener('keydown', (e) => {
             if (book.classList.contains('open')) {
                 if (e.key === 'ArrowLeft' && currentSpread > 1) {
